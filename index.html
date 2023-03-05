@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<link rel="stylesheet"type="text/css" href="index.css">
-		<title>About Me</title>
+<title>About Me</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@800&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<link rel="stylesheet"type="text/css" href="index.css">
+		<script>alert ("Current Version:\nv.4.4\n----------\n• Replaced -Certificates- with buttons\n\n• Added a progress bar, that I forgot\n\n------------------------------\n\nYou can see the full Changelog, if you toutch the -Full Changelog- button in the -Information- Section");
+//Information alerts end
+let ChangelogBtn = document.getElementById('ChangelogBtn');
+ChangelogBtn.ontouchstart = function() {alert ("Current Version:\nv.4.4\n\n---------- Full Changelog ----------\nv.4.4\n----------\n• Replaced -Certificates- with buttons\n\n• Added a progress bar, that I forgot\n\nv.4.3\n----------\n• Removed language\n\nv.4.2\n----------\n• Added a Border\n\nv.4.1\n----------\n• Added -Lessons Completed- and -Code Repo projects Completed- in the Skills Table\n• Added -Started- in Skills\n\nv.4.0\n----------\n• Added Text shadows\n• Imported Font\n\nv.3.1\n----------\n• Added -Certificates-\n\nv.3.0\n----------\n• Added -Hobbys- Section\n\nv.2.4\n----------\n• Replaced <hr> with <progress>\n\nv.2.3\n----------\n• Updated Table -> removed -progress- because of the Sololearn Update\n\nv. 2.2\n----------\n• Updated Table design\n• Added Changelog Button\n\nv. 2.1\n----------\n• Added Completed/Not Completed table\n• Added Changelog\n\nv. 2.0\n----------\n• Added -What I am doing now-\n\nv. 1.2\n----------\n• Removed Rainbow Name animation (reason: not working)\n\nv. 1.1\n----------\n• Added Rainbow Background\n• Added Rainbow Name animation\n\nv. 1.0\n----------\n• Published with:\n- Summary\n- Skills\n- Accounts\n- Expirience");}
+let HTML = document.getElementById('HTML');
+HTML.ontouchstart = function() {alert ("please wait..."); location.href = "https://www.sololearn.com/Certificate/1014-25732477/pdf";}
+let GDWJS = document.getElementById('GDWJS');
+GDWJS.ontouchstart = function() {alert ("please wait..."); location.href = "https://www.sololearn.com/Certificate/1175-25732477/pdf";}
+
+//Background Color Flow
+var body;
+var rgb = [0,0,0];
+window.onload=function(){
+	body = document.getElementsByTagName("body")[0];
+	growColor(body, 0, 1);
+   // growColor(body, 1);
+}
+function growColor(obj,coli, v){
+	var i = 0;
+	var grower = setInterval(function(){
+		obj.style.backgroundColor = "rgb("+rgb[0]+","+rgb[1]+","+rgb[2]+")";
+		if(++i<255){ rgb[coli]+=v;}
+		else{clearInterval(grower);
+		 
+		 if(coli<2){
+			 coli+=1;
+		 }
+		 else{
+			 coli = 0;
+			 v*=-1;
+		 }
+		 growColor(obj, coli, v); 
+		 }
+	}, 10);
+}</script>
 <div class="Name">
 		<h1 align="center"><span>Antony Blem</span></h1>
 		<p align="center"><strong>In school</strong></p>
